@@ -1,9 +1,10 @@
 import React from 'react'
 import './Form.css'
+import axios from 'axios'
 
 class Form extends React.Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
 
     this.state = { 
       name: '',
@@ -11,12 +12,32 @@ class Form extends React.Component {
       repo: '',
       url: '',
     }
+
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value })
+  }
+
+  async handleSubmit(e) {
+    e.preventDefault()
+
+    const { name, email, repo, url } = this.state
+
+    const form = await axios.post('/api/form', {
+      name,
+      email,
+      repo,
+      url
+    })
   }
 
   render() {
     return(
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
         <input
             type='text'
             name= 'name'
@@ -41,13 +62,12 @@ class Form extends React.Component {
             placeholder= 'PROJECT URL' 
             onChange={this.handleChange}
           />
-          <button onClick={(e) => this.onSubmit(e)}>Submit</button>
+          <button>Submit</button>
         </form>
       </div>
     )
   }
 
 }
-
 
 export default Form 
