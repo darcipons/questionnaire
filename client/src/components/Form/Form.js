@@ -11,8 +11,6 @@ class Form extends React.Component {
       repo: '',
       url: '',
     }
-
-  
   }
 
   render() {
@@ -20,35 +18,35 @@ class Form extends React.Component {
       <div>
         <form>
         <input
-            name= 'fullName'
+            type='text'
+            name= 'name'
             placeholder= 'FULL NAME' 
-            value= {this.state.fullName}
-            onChange={e => this.change(e)}
-            autoComplete= "off"
+            onChange={this.handleChange}
           />
           <input
+            type='text'
             name= 'email'
             placeholder= 'EMAIL' 
-            value= {this.state.email}
-            onChange={e => this.change(e)}
+            onChange={this.handleChange}
           />
           <input
+            type='text'
             name= 'repo'
             placeholder= 'PROJECT REPO' 
-            value= {this.state.repo}
-            onChange={e => this.change(e)}
+            onChange={this.handleChange}
           />
           <input
+            type='text'
             name= 'url'
             placeholder= 'PROJECT URL' 
-            value= {this.state.url}
-            onChange={e => this.change(e)}
+            onChange={this.handleChange}
           />
           <button onClick={(e) => this.onSubmit(e)}>Submit</button>
         </form>
       </div>
     )
   }
+
 }
 
 
