@@ -2,5 +2,26 @@ form {
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 15%;
+  width: 30%;
+  background-color: #456990;
+  padding: 3%;
+  margin-top: 3%;
+}
+
+input {
+  background-color: #E4FDE1;
+  padding: 3%;
+  margin: 3%;
+}
+
+button {
+  background-color: #F45B69;
+  cursor: pointer;
+  margin: 6%;
+  width: 86%;
+  padding: 3%;
+  border-radius: 3px;
+  border-style: none;
+  color: #E4FDE1;
+  font-size: 16px;
 }
