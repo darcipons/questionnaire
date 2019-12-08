@@ -1,3 +1,6 @@
-h1 {
-  color: purple;
+form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 15%;
 }
