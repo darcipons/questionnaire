@@ -3,4 +3,16 @@ form {
   flex-direction: column;
   margin: auto;
   width: 15%;
+  font-family: museo-sans, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  background-color: #456990;
+}
+
+input {
+  background-color: #E4FDE1;
+}
+
+button {
+  background-color: #F45B69;
 }
