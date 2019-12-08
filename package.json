@@ -1,0 +1,32 @@
+{
+  "name": "trim_code_challenge",
+  "version": "1.0.0",
+  "description": "Create a responsive web app for a questionnaire that can be used to self-evaluate applicants to a web development apprenticeship program.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.0.0",
+    "emailjs-com": "^2.4.1",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.1",
+    "nodemon": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darcipons/questionnaire.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darcipons/questionnaire/issues"
+  },
+  "homepage": "https://github.com/darcipons/questionnaire#readme"
+}
