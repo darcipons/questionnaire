@@ -141,7 +141,7 @@ class Form extends React.Component {
                 onChange= {this.handleChange}
               />
             </div> 
-          <div className='rating_title'>JAVASCRIPT:</div>
+          <div className='rating_title'>JAVASCRIPT :</div>
             <div className= 'rating_input 8'>
               <input
                 name= 'rating8'
