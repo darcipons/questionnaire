@@ -45,7 +45,7 @@ app.post('/api/form', (req, res) => {
 
     let mailOptions = {
       from: 'darcimarie33@gmail.com',
-      to: 'darcimarie33@gmail.com',
+      to: 'tim@trimagency.com',
       subject: 'Code Challenge',
       html: htmlEmail
     }
