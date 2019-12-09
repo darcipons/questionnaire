@@ -6,7 +6,11 @@ form {
   background-color: #456990;
   padding: 3%;
   margin-top: 3%;
+  margin-bottom: 3%;
+  font-family: "Museo Sans 500"; src: url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.eot");
+  font-weight: 500;
 }
+
 
 input {
   background-color: #E4FDE1;
@@ -24,4 +28,27 @@ button {
   border-style: none;
   color: #E4FDE1;
   font-size: 16px;
+}
+
+.rating_container {
+  display: grid; 
+  grid-template-columns: 70% 30%;
+  grid-template-rows: repeat(15, 80px);
+  grid-gap: 10px;;
+  margin-top: 8%;
+}
+
+.rating_title {
+  color: #E4FDE1;
+  margin-left: 5%;
+}
+
+.rating_input {
+  justify-self: end;
+  margin-right: 20%;
+}
+
+.rating_input input {
+  height: 38px;
+  width: 70px;
 }
