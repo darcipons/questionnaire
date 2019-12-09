@@ -25,7 +25,7 @@ class Form extends React.Component {
       rating12: '',
       rating13: '',
       rating14: '',
-      rating15: '', 
+      rating15: '',
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -39,18 +39,21 @@ class Form extends React.Component {
   async handleSubmit(e) {
     e.preventDefault()
 
-    const { name, email, repo, url, rating } = this.state
+    const { name, email, repo, url, rating1, rating2, rating3, rating4, rating5, rating6, rating7, rating8,
+      rating9, rating10, rating11, rating12, rating13, rating14, rating15 } = this.state
 
-    const form = await axios.post('/api/form', {
+    await axios.post('/api/form', {
       name, email, repo, url, rating1, rating2, rating3, rating4, rating5, rating6, rating7, rating8,
       rating9, rating10, rating11, rating12, rating13, rating14, rating15
     })
   }
 
+
+
   render() {
     return(
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} onReset={this.resetForm}>
         <input
             type='text'
             name= 'name'
@@ -106,8 +109,9 @@ class Form extends React.Component {
             TESTING
                 <input
                   name= 'rating4'
-                  value= {this.state.name}
-                  onChange= {e => this.change(e)}
+                  value= {this.state.rating4}
+                  type='text'
+                  onChange= {this.handleChange}
                 />
           </label>  
           <label>
@@ -209,7 +213,7 @@ class Form extends React.Component {
                 onChange= {this.handleChange}
               />
           </label>
-          <button>Submit</button>
+          <button onClick={this.resetForm}>Submit</button>
         </form>
       </div>
     )
