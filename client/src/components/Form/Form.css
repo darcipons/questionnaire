@@ -1,6 +1,3 @@
-@import url(//db.onlinewebfonts.com/c/16697a764b01cdcc691b05f001046bc3?family=Museo+Sans+500);
-
-
 form {
   display: flex;
   flex-direction: column;
@@ -12,7 +9,6 @@ form {
   margin-bottom: 3%;
   font-family: "Museo Sans 500"; src: url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.eot");
   font-weight: 500;
-  color: green;
 }
 
 
